@@ -573,35 +573,25 @@ footer p{
 .cart-count{
     background:#16a34a;
     color:white;
-
     padding:2px 7px;
-
     border-radius:50px;
-
     font-size:12px;
-
     margin-left:5px;
 }
 .wishlist{
     position:absolute;
     top:10px;
     right:10px;
-
     font-size:20px;
     cursor:pointer;
-
-    z-index:10;
-
+   z-index:10;
     background:none;
     border:none;
     box-shadow:none;
-
     width:auto;
     height:auto;
-
     transition:.3s ease;
 }
-
 .wishlist:hover{
     transform:scale(1.15);
 }
@@ -626,38 +616,29 @@ footer p{
 .modal-content{
     width:90%;
     max-width:650px;
-
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(25px);
-
     border:1px solid rgba(255,255,255,0.25);
-
     box-shadow:
     0 8px 32px rgba(31,38,135,0.25),
     0 0 25px rgba(34,197,94,0.15);
-
     border-radius:30px;
-
     padding:30px;
     position:relative;
     overflow:hidden;
 }
 @keyframes popup{
-
     from{
         opacity:0;
         transform:scale(.8)
         translateY(30px);
     }
-
     to{
         opacity:1;
         transform:scale(1)
         translateY(0);
     }
-
 }
-
 .modal-content img{
     width:100%;
     height:280px;
@@ -666,10 +647,8 @@ footer p{
     margin-bottom:15px;
 }.modal-content img{
     border:2px solid rgba(255,255,255,0.25);
-
     box-shadow:
     0 10px 30px rgba(0,0,0,.2);
-
     border-radius:20px;
 }
 #modalTitle{
@@ -678,7 +657,6 @@ footer p{
     color:#51773a;
     margin-bottom:10px;
 }
-
 #modalPrice{
     font-size:24px;
     font-weight:700;
@@ -804,13 +782,9 @@ footer p{
 
 .cart-item{
     background:rgba(255,255,255,.08);
-
     padding:12px;
-
     border-radius:15px;
-
     margin-bottom:12px;
-
     color:white;
 }
 
@@ -886,54 +860,36 @@ footer p{
 .sell-content{
     width:85%;
     max-width:85vhpx;
-
     padding:30px;
-
     position:relative;
-
     border-radius:25px;
-
     background:rgba(255,255,255,0.12);
-
     backdrop-filter:blur(25px);
     -webkit-backdrop-filter:blur(25px);
-
     border:1px solid rgba(255,255,255,0.2);
-
     box-shadow:
     0 8px 32px rgba(31,38,135,.25),
     0 0 25px rgba(34,197,94,.15);
      padding:25px;
-
     scrollbar-width:thin;
     overflow:auto;
 }
-
 .sell-content::after{
     content:"";
-
     position:absolute;
-
     width:120px;
     height:120px;
-
     background:rgba(59,130,246,.08);
-
     border-radius:50%;
-
     bottom:-40px;
     left:-40px;
 }
 .sell-content h2{
     text-align:center;
-
     font-size:32px;
     font-weight:700;
-
     color:#22c55e;
-
     margin-bottom:20px;
-
     text-shadow:
     0 0 10px rgba(34,197,94,.4);
 }
@@ -942,7 +898,7 @@ footer p{
 .close-help,
 .close-login,
 .close-learn{
-    position:sticky;
+    position:absolute;
     top:10px;
     right:15px;
     font-size:25px;
@@ -957,77 +913,78 @@ footer p{
 
 #sellForm input,
 #sellForm textarea{
-
     background:rgba(255,255,255,.08);
-
     border:1px solid rgba(255,255,255,.15);
-
     color:white;
-
     padding:12px;
-
     border-radius:12px;
-
     outline:none;
 }
-
 #sellForm input::placeholder,
 #sellForm textarea::placeholder{
     color:#d1d5db;
 }
-
 #sellForm input:focus,
 #sellForm textarea:focus{
-
     border-color:#22c55e;
-
     box-shadow:
     0 0 12px rgba(34,197,94,.25);
-
 }
 #sellForm button{
-
     background:linear-gradient(
         135deg,
         #22c55e,
         #16a34a
     );
-
     color:white;
-
     border:none;
-
     padding:12px 25px;
-
     border-radius:12px;
-
     font-weight:600;
-
     cursor:pointer;
-
     transition:.3s;
 }
-
 #sellForm button:hover{
-
     transform:translateY(-3px);
-
     box-shadow:
     0 10px 20px rgba(34,197,94,.3);
-
 }
 .faq-item{
     margin-bottom:25px;
 }
-
 .faq-item h3{
     margin-bottom:10px;
+     color:#111827;
 }
 
 .faq-item p{
+    color:#111827;
     line-height:1.7;
+    font-weight:500;
 }
 #learnModal p{
     margin-bottom:18px;
+      font-size:18px;
     line-height:1.8;
+     color:#111827;
+     font-weight:500;
+}
+
+@media(max-width:768px){
+    .sell-content{
+        width:95%;
+       max-width:700px;
+        max-height:85vh;
+        padding:20px;
+    }
+    @media(max-width:768px){
+    #learnModal h2{
+        font-size:28px;
+    }
+    #learnModal p{
+        font-size:16px;
+        line-height:1.8;
+    }
+}
+
 }
