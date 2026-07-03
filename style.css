@@ -144,8 +144,8 @@ body{
     background:
     linear-gradient(
         to right,
-        rgba(245,250,245,0.85),
-        rgba(245,250,245,0.55)
+        rgba(245,250,245,0.65),
+        rgba(245,250,245,0.35)
     ),
     url("images/student portfolio.jpeg");
     background-size:cover;
@@ -183,10 +183,12 @@ body{
     color:#16a34a;
 }
 
+
 .hero p{
     font-size:1.1rem;
-    color:#4b5563;
-
+    
+      color:#1f2937;
+    font-weight:500;
     line-height:1.8;
 
     margin-bottom:30px;
@@ -460,14 +462,17 @@ footer p{
     font-size:10px;
     white-space:nowrap;
 }
-    .menu{
+       .menu{
+        gap:2px !important;
+        padding:4px !important;
+        flex-wrap:nowrap;
         overflow-x:auto;
-        gap:20px;
-        padding:12px 15px;
     }
+
     .menu a{
+        padding:5px 6px !important;
+        font-size:11px !important;
         white-space:nowrap;
-        font-size:12px;
     }
     .hero{
         height:400px;
@@ -986,5 +991,33 @@ footer p{
         line-height:1.8;
     }
 }
+}
+body.dark-mode{
+    background:#000000;
+    color:white;
+}
 
+body.dark-mode .navbar,
+body.dark-mode .menu,
+body.dark-mode .card,
+body.dark-mode .feature,
+body.dark-mode .stat,
+body.dark-mode .category{
+    background:#111111;
+    color:white;
+    border:1px solid #222;
+}
+
+body.dark-mode .card h3,
+body.dark-mode .feature h3,
+body.dark-mode .stat h2,
+body.dark-mode .featured h2,
+body.dark-mode .card p,
+body.dark-mode .feature p,
+body.dark-mode .stat p{
+    color:white;
+}
+
+body.dark-mode .price{
+    color:#22c55e;
 }
