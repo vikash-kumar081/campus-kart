@@ -33,24 +33,19 @@
 
         <div class="nav-right">
 
-            <a href="#">
+           <a href="#" id="sellBtn">
                 <i class="fa-solid fa-circle-plus"></i>
                 Sell Item
-            </a>
+            </a> 
 
             <a href="#" class="cart-link">
                 🛒 Cart
                 <span class="cart-count">0</span>
             </a>
-            <a href="#">
-                <i class="fa-regular fa-bell"></i>
-            </a>
-
-            <a href="#">
+           <a href="#" id="loginBtn">
                 <i class="fa-solid fa-user"></i>
-                Vikash
+                Login
             </a>
-
         </div>
 
     </nav>
@@ -59,18 +54,18 @@
 
     <section class="menu">
 
-        <a href="#">🏠 Home</a>
-        <a href="#">Categories</a>
-        <a href="#">My Orders</a>
-        <a href="#">Messages</a>
-        <a href="#">Favorites</a>
-        <a href="#">Help</a>
+       <a href="#home">🏠 Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#orders">My Orders</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#help" id="helpBtn">Help</a>
+
 
     </section>
 
     <!-- Hero Section -->
 
-   <section class="hero">
+   <section  id="home"  class="hero">
 
     <div class="hero-content">
 
@@ -100,7 +95,7 @@
                 Explore Items →
             </a>
 
-            <a href="#" class="btn-outline">
+            <a href="#" class="btn-outline" id="learnMoreBtn">
                 Learn More
             </a>
         </div>
@@ -110,7 +105,7 @@
 </section>
         <!-- Categories -->
 
-    <section class="categories">
+    <section id="categories" class="categories">
 
         <div class="category">📚 Books</div>
         <div class="category">💻 Electronics</div>
@@ -126,7 +121,7 @@
 
     <!-- Featured Products -->
 
-    <section class="featured">
+    <section  id="items" class="featured">
 
         <h2>Featured Listings</h2>
 
@@ -137,7 +132,6 @@
                 <img src="images/dsa book.jfif">
                 <h3>Data Structures Book</h3>
                 <p class="price">₹350</p>
-                <p>LPU Campus</p>
                 <button class="details-btn">
                      View Details
                 </button>
@@ -148,7 +142,6 @@
                 <img src="images/headphone.jpg">
                 <h3>Boat Headphones</h3>
                 <p class="price">₹799</p>
-                <p>LPU Campus</p>
                 <button class="details-btn">
                      View Details
                 </button>
@@ -159,7 +152,6 @@
                 <img src="images/laptop.jpg">
                 <h3>Dell Laptop</h3>
                 <p class="price">₹28000</p>
-                <p>LPU Campus</p>
                 <button class="details-btn">
                      View Details
                 </button>
@@ -170,7 +162,6 @@
                 <img src="images/table.jpg">
                 <h3>Study Table</h3>
                 <p class="price">₹1999</p>
-                <p>LPU Campus</p>
                 <button class="details-btn">
                      View Details
                 </button>
@@ -181,7 +172,6 @@
                 <img src="images/black hoodie.jfif">
                 <h3>Black Hoodie</h3>
                 <p class="price">₹499</p>
-                <p>LPU Campus</p>
                <button class="details-btn">
                      View Details
                 </button>
@@ -192,7 +182,6 @@
                 <img src="images/cricket bat.jfif">
                 <h3>Cricket Bat</h3>
                 <p class="price">₹1299</p>
-                <p>LPU Campus</p>
                <button class="details-btn">
                      View Details
                 </button>
@@ -203,7 +192,6 @@
                 <img src="images/calulator.jpg">
                 <h3>Scientific Calculator</h3>
                 <p class="price">₹599</p>
-                <p>LPU Campus</p>
                 <button class="details-btn">
                      View Details
                 </button>
@@ -214,7 +202,6 @@
                 <img src="images/bagack.jfif">
                 <h3>College Backpack</h3>
                 <p class="price">₹699</p>
-                <p>LPU Campus</p>
                 <button class="details-btn">
                      View Details
                 </button>
@@ -312,6 +299,42 @@
     </div>
 
 </div>
+<div class="sell-modal" id="sellModal">
+
+    <div class="sell-content">
+
+        <span class="close-sell">&times;</span>
+        <h2>Sell Your Item</h2>
+        <form id="sellForm">
+
+            <input type="text"
+            placeholder="Product Name"
+            required>
+
+            <input type="number"
+            placeholder="Price"
+            min="0"
+            required>
+
+            <input type="text"
+            placeholder="Category"
+            required>
+
+            <input type="text"
+            placeholder="Contact Number"
+            required>
+
+            <label>Product Image</label>
+            <input type="file" accept="image/*">
+            <textarea
+            placeholder="Description"></textarea>
+            <button type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+
+</div>
     <!-- Footer -->
 
     <footer>
@@ -359,7 +382,132 @@
     </div>
 
 </div>
-    
+ <div class="sell-modal" id="helpModal">
+
+    <div class="sell-content">
+
+        <span class="close-help">&times;</span>
+
+       <h2>🛟 Help & Support</h2>
+
+<div class="faq-item">
+    <h3>📦 How do I buy a product?</h3>
+    <p>
+         <strong>Answer:</strong>
+        Browse available listings, view product details,
+        and add your preferred item to the cart.
+    </p>
+</div>
+
+<div class="faq-item">
+    <h3>🛒 How can I sell an item?</h3>
+    <p>
+         <strong>Answer:</strong>
+        Click on "Sell Item", provide the required
+        product information, and submit your listing.
+    </p>
+</div>
+
+<div class="faq-item">
+    <h3>💳 How are payments handled?</h3>
+    <p>
+         <strong>Answer:</strong>
+        Buyers and sellers can mutually decide the
+        payment method before completing the transaction.
+    </p>
+</div>
+
+<div class="faq-item">
+    <h3>🔒 Is CampusKart safe to use?</h3>
+    <p>
+         <strong>Answer:</strong>
+        CampusKart is designed for students and promotes
+        secure interactions within the campus community.
+    </p>
+</div>
+
+<div class="faq-item">
+    <h3>📞 Need additional support?</h3>
+    <p>
+        Contact our support team at
+        support@campuskart.com
+    </p>
+</div>
+
+    </div>
+
+</div>   
+<div class="sell-modal" id="learnModal">
+
+    <div class="sell-content">
+
+        <span class="close-learn">&times;</span>
+
+       <h2>🚀 About CampusKart</h2>
+
+<p>
+CampusKart is a student-driven marketplace designed
+to simplify buying and selling within the campus community.
+Our platform connects students directly, making it easier
+to find affordable products, save money, and reduce waste
+through reuse.
+</p>
+
+<p>
+Whether it's textbooks, electronics, furniture,
+hostel essentials, or daily-use items, CampusKart helps
+students discover great deals from trusted peers.
+</p>
+
+<p>
+✨ Smart. Secure. Student-Friendly.
+</p>
+
+<p>
+🎯 Our Mission: To build a trusted campus ecosystem
+where students can buy, sell, and connect effortlessly.
+</p>
+
+<p>
+🌱 Promoting sustainability by encouraging reuse
+instead of unnecessary purchases.
+</p>
+
+<p>
+🤝 Built for Students, by Students.
+</p>
+</div>
+</div>
+<div class="sell-modal" id="loginModal">
+
+    <div class="sell-content">
+
+        <span class="close-login">&times;</span>
+
+        <h2>👤 Welcome Back</h2>
+
+        <form id="loginForm">
+
+            <input
+            type="text"
+            id="userName"
+            placeholder="Full Name"
+            required>
+
+            <input
+            type="email"
+            id="userEmail"
+            placeholder="Email Address"
+            required>
+
+            <button type="submit">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
+
 
 <script src="script.js"></script>
 </body>
