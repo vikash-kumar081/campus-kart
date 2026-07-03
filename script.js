@@ -25,33 +25,23 @@ searchInput.addEventListener("keyup", () => {
 // =========================
 
 let cartCount = 0;
-
 const cartCounter =
 document.querySelector(".cart-count");
-
 const addedProducts = new Set();
-
 document
 .getElementById("addToCartBtn")
 .addEventListener("click", () => {
-
     const productName =
     document.getElementById("modalTitle").textContent;
-
     if(addedProducts.has(productName)){
         alert("Already Added To Cart");
         return;
     }
-
     addedProducts.add(productName);
-
     cartCount++;
-
     cartCounter.textContent = cartCount;
     const item = document.createElement("div");
-
 item.classList.add("cart-item");
-
 item.innerHTML = `
 <h4>${productName}</h4>
 <p class="item-price">${modalPrice.textContent}</p>
@@ -346,5 +336,20 @@ document
     `<i class="fa-solid fa-user"></i> ${firstName}`;
 
     loginModal.classList.remove("active");
+
+});
+const themeToggle =
+document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    document.body.classList.toggle("dark-mode");
+
+    themeToggle.textContent =
+    document.body.classList.contains("dark-mode")
+    ? "☀️ Light Mode"
+    : "🌙 Dark Mode";
 
 });
